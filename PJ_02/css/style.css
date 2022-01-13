@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+[divCampo]{
+    margin-top: 15px;
+    zoom: 10;
+    cursor: pointer;
+}
+
+:root {
+    --cor-ligado: rgb(0, 255, 213);
+}
+
+.inputDesligado {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 2px solid rgb(77, 76, 76);
+    background-color: rgba(87, 85, 85, 0.548);
+    transition: 0.5s;
+}
+
+.inputDesligado [divButton] {
+    position: absolute;
+    margin: 0px 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 14px;
+    border: 2px solid rgb(77, 76, 76);
+    background: rgba(87, 85, 85, 0.342);
+    left: -3px;
+    transition: 1s;
+    z-index: 1;
+}
+
+.inputLigado {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 2px solid var(--cor-ligado);
+    box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+    animation: inputCampoLigado 2s normal;
+}
+
+.inputLigado [divButton] {
+    position: absolute;
+    margin: 0px 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 14px;
+    border: 2px solid var(--cor-ligado);
+    box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+    align-self: flex-end;
+    left: 28px;
+    transition: 3s;
+    z-index: 1;
+    animation: inputDivLigado 2s normal;
+}
+
+.inputLigado span {
+    left: 5px;
+    color: var(--cor-ligado);
+    text-shadow: 0px 0px 5px var(--cor-ligado);
+    animation: inputSpanLigado 2s normal;
+}
+.inputDesligado span {
+    left: 30px;
+    color: rgba(87, 85, 85, 0.342);
+    text-shadow: 0px 0px 5px rgba(128, 128, 128, 0.507);
+}
+
+.inputLigado span, .inputDesligado span {
+    position: absolute;
+    font-size: 0.7rem;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+@keyframes inputCampoLigado {
+    0% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+    }
+    10% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+    }
+    20% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+    }
+    40% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+    }
+    60% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+    }
+    100% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+    }
+}
+
+@keyframes inputDivLigado {
+    0% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    10% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+    20% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    40% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+    60% {
+        border-color: rgb(77, 76, 76);
+        box-shadow: none;
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    100% {
+        border-color: var(--cor-ligado);
+        box-shadow: inset 0px 0px 5px var(--cor-ligado), 0px 0px 5px var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+}
+@keyframes inputSpanLigado {
+    0% {
+        color: rgb(77, 76, 76);
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    10% {
+        color: var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+    20% {
+        color: rgb(77, 76, 76);
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    40% {
+        color: var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+    60% {
+        color: rgb(77, 76, 76);
+        text-shadow: 0px 0px 5px rgb(77, 76, 76);
+    }
+    100% {
+        color: var(--cor-ligado);
+        text-shadow: 0px 0px 5px var(--cor-ligado);
+    }
+}
